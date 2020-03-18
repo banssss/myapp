@@ -6,24 +6,24 @@
     <div class="form-group @error('name') is-invalid @enderror">
         <input type="text" name="name" class="form-control" 
         placeholder="이름" value="{{ old('name') }}" autofocus>
-        @error('name'){!! <span class="form-error"> :message </span> !!}@enderror
+        @error('name') <span class="text-danger">{{ $message }} @enderror
     </div>
     <div class="form-group @error('email') is-invalid @enderror">
         <input type="email" name="email" class="form-control" 
         placeholder="메일" value="{{ old('email') }}">
-        @error('email'){!! <span class="form-error"> :message </span> !!}@enderror
+        @error('email')<span class="text-danger">{{ $message }}@enderror
     </div>
   
     <div class="form-group @error('password') is-invalid @enderror">
         <input type="password" name="password" class="form-control" 
         placeholder="비밀번호"/>
-        @error('password'){!! <span class="form-error"> :message </span> !!}@enderror
+        @error('password')<span class="text-danger">{{ $message }}@enderror
     </div>
   
     <div class="form-group @error('password_confirmation') is-invalid @enderror">
         <input type="password" name="password_confirmation" class="form-control"
          placeholder="비밀번호 확인" />
-         @error('password_confirmation'){!! <span class="form-error"> :message </span> !!}@enderror
+         @error('password_confirmation')<span class="text-danger">{{ $message }}@enderror
     </div>
   
     <div class="form-group">
